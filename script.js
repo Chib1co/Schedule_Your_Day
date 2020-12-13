@@ -15,9 +15,9 @@ let newTime = new Date();
  console.log(currentHour)
  $('.edit_cont').each(function(){
     var val = parseInt($(this).prop('id'));
-    if(val > currentHour && val < currentHour+8){
+    if(val > currentHour && val < currentHour+9){
         $(this).css('background-color','lightgreen');
-    }else if(val < currentHour && val > currentHour-8){
+    }else if(val < currentHour && val > currentHour-9){
         $(this).css('background-color','lightgrey');
     }else if(val === currentHour){
         $(this).css('background-color','salmon');
@@ -27,32 +27,32 @@ let newTime = new Date();
 });
 //make a textarea with a special class hour${i}, put it in the right div
     //add input under edit_cont class 
-let newPlan = $("<textarea>")
-newPlan.addClass("hours${i}");
-$(".edit_cont").append(newPlan);
+   
+for(var i = 9; i<18; i++){
+    let newPlan = $("<textarea>");
+    newPlan.addClass("hours${i}");
+    $(".textarea" + i).append(newPlan);
 
-    //make a saveBtn, put it in the right div. Have it grab info from class hour${i}
-let saveBtn = $("<button>");
-saveBtn.addClass("hours'${i}'");
-saveBtn.html("Save");
-console.log(saveBtn);
+     //make a saveBtn, put it in the right div. Have it grab info from class hour${i}
+   let saveBtn = $("<button>");
+   saveBtn.addClass("hours'${i}'");
+   saveBtn.html("Save");
+   saveBtn.on("click", function(){
+       console.log("clicked save");
+   
+   console.log(saveBtn);
 
-
-for( var i = 0; i<9; i++){
+});
+$("#saveBtn" + i).append(saveBtn);
 };
-//addEventlister under edit_btn div
-saveBtn.on("click", function(){
-    console.log(hours({i}));
 
-
-
-    let plan = newPlan.value;
+   let plan = newPlan.value;
     localStorage.setItem("plan", JSON.stringify(plan));
 
 
-});
 
-$(".save_btn").append(saveBtn);
+
+
 
 
 // localStorage.setItem() to save items
