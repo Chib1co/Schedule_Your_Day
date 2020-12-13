@@ -35,20 +35,30 @@ for(var i = 9; i<18; i++){
 
      //make a saveBtn, put it in the right div. Have it grab info from class hour${i}
    let saveBtn = $("<button>");
-   saveBtn.addClass("hours'${i}'");
+   saveBtn.addClass("hours${i}");
    saveBtn.html("Save");
-   saveBtn.on("click", function(){
-       console.log("clicked save");
-   
-   console.log(saveBtn);
 
-});
 $("#saveBtn" + i).append(saveBtn);
 };
 
-   let plan = newPlan.value;
-    localStorage.setItem("plan", JSON.stringify(plan));
 
+$(".save").click(function() {
+    console.log($(this))
+    // $(this) will be the save button we are clicking on
+    // use $(this) and some jQuery methods to traverse to the neighboring textarea and capture it's value
+    // use $(this) and some jQuery methods to capture the hour
+    // send it localStorage
+  });
+
+// saveBtn.on("click", function(){
+//     console.log("clicked save");
+
+
+// let plan = newPlan.value;
+// localStorage.setItem("plan", JSON.stringify(plan));
+
+
+ 
 
 
 
