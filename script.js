@@ -25,28 +25,34 @@ let newTime = new Date();
         $(this).css('background-color','white');
     }
 });
-//add input under edit_cont class 
+//make a textarea with a special class hour${i}, put it in the right div
+    //add input under edit_cont class 
 let newPlan = $("<textarea>")
-newPlan.addClass("inputPlan");
+newPlan.addClass("hours${i}");
 $(".edit_cont").append(newPlan);
 
- 
-
-//addEventlister under edit_btn div
-let saveBtn = $("<button>")
-saveBtn.addClass("savePlan");
+    //make a saveBtn, put it in the right div. Have it grab info from class hour${i}
+let saveBtn = $("<button>");
+saveBtn.addClass("hours'${i}'");
 saveBtn.html("Save");
-$(".save_btn").append(saveBtn);
+console.log(saveBtn);
 
+
+for( var i = 0; i<9; i++){
+};
+//addEventlister under edit_btn div
 saveBtn.on("click", function(){
+    console.log(hours({i}));
+
+
+
     let plan = newPlan.value;
     localStorage.setItem("plan", JSON.stringify(plan));
-
-    
 
 
 });
 
+$(".save_btn").append(saveBtn);
 
 
 // localStorage.setItem() to save items
