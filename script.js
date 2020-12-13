@@ -26,14 +26,26 @@ let newTime = new Date();
     }
 });
 //add input under edit_cont class 
-let newPlan = $("<input>")
+let newPlan = $("<textarea>")
 newPlan.addClass("inputPlan");
-newPlan.text($(".edit_cont"));
 $(".edit_cont").append(newPlan);
 
  
 
 //addEventlister under edit_btn div
+let saveBtn = $("<button>")
+saveBtn.addClass("savePlan");
+saveBtn.html("Save");
+$(".save_btn").append(saveBtn);
+
+saveBtn.on("click", function(){
+    let plan = newPlan.value;
+    localStorage.setItem("plan", JSON.stringify(plan));
+
+    
+
+
+});
 
 
 
