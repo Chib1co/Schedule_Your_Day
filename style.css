@@ -70,3 +70,11 @@ body {
     transition: all .3s ease-in-out;
   }
   
+    
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+      width: 400px;
+      font-size: 18px;
+    }
+  }
