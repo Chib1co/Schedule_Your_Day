@@ -52,9 +52,4 @@ $("#saveBtn" + i).append(saveBtn);
 };
 
 
-// localStorage.setItem() to save items
-// It takes two arguments, a key, and a value
-// localStorage.getItem() to get saved items back out - use one key
-
-
 }); //document ready closing 
