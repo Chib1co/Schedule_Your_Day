@@ -29,41 +29,32 @@ let newTime = new Date();
     //add input under edit_cont class 
    
 for(var i = 9; i<18; i++){
-    let newPlan = $("<textarea>");
-    newPlan.addClass("hours${i}");
+    let newPlan = $(`<textarea>`);
+    newPlan.addClass(`hours${i}`);
     $(".textarea" + i).append(newPlan);
 
      //make a saveBtn, put it in the right div. Have it grab info from class hour${i}
    let saveBtn = $("<button>");
-   saveBtn.addClass("hours${i}");
+   saveBtn.addClass(`hours${i}`);
    saveBtn.html("Save");
+
+saveBtn.click(function() {
+    console.log($(this).parent().siblings().children());
+    let planText = $(this).parent().siblings().children().val();
+    console.log(planText);
+  
+    localStorage.setItem("plan", JSON.stringify(planText));   
+   
+  });
 
 $("#saveBtn" + i).append(saveBtn);
 };
 
 
-$(".save").click(function() {
-    console.log($(this))
-    // $(this) will be the save button we are clicking on
-    // use $(this) and some jQuery methods to traverse to the neighboring textarea and capture it's value
-    // use $(this) and some jQuery methods to capture the hour
-    // send it localStorage
-  });
-
-// saveBtn.on("click", function(){
-//     console.log("clicked save");
 
 
 // let plan = newPlan.value;
 // localStorage.setItem("plan", JSON.stringify(plan));
-
-
- 
-
-
-
-
-
 
 // localStorage.setItem() to save items
 // It takes two arguments, a key, and a value
