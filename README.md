@@ -26,5 +26,5 @@ I have made a day schedule using javascript DOM and Jquery
 
 
 # What I learned from this homework
- * This homework made me feel much better than the last one to be honest. I have made conteiner,row and col div in html first. Then creat elements in Javascript to append to it. But I have realized I should probably have made those divs in Javascript too. But I did not having enough time to fix it. I just submit as it is. Functions are all working in order, and I know what I need to change. 
- Jquery is little confusing me still, but also making it much easier to write a javascript code. SO amazing!
+ * This homework made me feel much better than the last one to be honest. I have made conteiner,row and col div in html first. Then creat elements in Javascript to append to it. I wondered if I was supposed to create the divs in Javascript as well when I was submitting this. But I did not having enough time to fix it. I just submit as it is. Functions are all working in order, and I know what I need to change. 
+ Jquery is little confusing me still, but also making it much easier to write a  code in js file. SO amazing!
