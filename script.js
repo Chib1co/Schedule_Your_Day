@@ -3,7 +3,7 @@ $( document ).ready(function() {
 
 
  let m =  moment();
- let output = m.format("dddd MMM Mo YYYY");
+ let output = m.format("dddd MMM Do YYYY");
 
  console.log(output) 
  $("#currentDay").text(output)
